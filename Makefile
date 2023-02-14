@@ -98,6 +98,9 @@ run-web: clean
 run-windows: clean
 	flutter run --release -d windows
 
+run-headless: clean
+	flutter run --release -d web-server --web-port=8080
+
 ########################################
 # Flutter Run Debug 
 ########################################
