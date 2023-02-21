@@ -11,12 +11,7 @@ help:
 	@echo "make outdated        | List outdated application dependencies"
 	@echo "make upgrade         | Upgrade the outdated application dependencies"
 	@echo "---------------------|---------------------"
-	@echo "make build-android   | Build application for Android (appbundle)"
-	@echo "make build-ios       | Build application for iOS"
-	@echo "make build-linux     | Build application for Linux"
-	@echo "make build-macos     | Build application for MacOS"
-	@echo "make build-web       | Build application for Web"
-	@echo "make build-windows   | Build application for Windows"
+	@echo "make build-[X]       | [X] = android | ios | linux | macos | web | windows"
 	@echo "---------------------|---------------------"
 	@echo "make run             | Run application in release mode for the default platform"
 	@echo "make run-[X]         | [X] = linux | macos | web | windows"
@@ -128,16 +123,16 @@ run-profile: clean
 	flutter run --profile
 
 run-profile-linux: clean
-	flutter run --debug -d linux
+	flutter run --profile -d linux
 
 run-profile-macos: clean
-	flutter run --debug -d macos
+	flutter run --profile -d macos
 
 run-profile-web: clean
-	flutter run --debug -d chrome
+	flutter run --profile -d chrome
 
 run-profile-windows: clean
-	flutter run --debug -d windows
+	flutter run --profile -d windows
 
 ########################################
 # Flutter Build Runner
